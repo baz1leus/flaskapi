@@ -33,7 +33,7 @@ def create_store():
     return jsonify(store)
 
 # POST /store/<name>/item -> name, price
-@app.route('/store/<string:store_name>', methods=['POST'])
+@app.route('/store/<string:store_name>/item', methods=['POST'])
 def create_item(store_name):
     data = request.get_json()
     
